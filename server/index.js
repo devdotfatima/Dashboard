@@ -25,3 +25,17 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/sales", salesRoutes);
 app.use("/management", managementRoutes);
+
+// Mongoose setup
+
+const PORT = process.env.PORT || 9000;
+console.log(PORT);
+mongoose
+	.connect(process.env.DB_URL, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
+	.then(() => {
+		app.listen(PORT, () => console.log("Server has started at ", PORT));
+	})
+	.catch((error) => console.log("error>>:", error));
