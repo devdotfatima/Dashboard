@@ -20,8 +20,7 @@ const Layout = () => {
 		return <span>Loading...</span>;
 	}
 
-	console.log(error);
-	console.log(data);
+	const user = data.data;
 	if (isError) {
 		return <span>Error: {error.message}</span>;
 	}
@@ -32,7 +31,7 @@ const Layout = () => {
 			height="100%"
 		>
 			<Sidebar
-				user={data || {}}
+				user={user || {}}
 				isNonMobile={isNonMobile}
 				drawerWidth="250px"
 				isSidebarOpen={isSidebarOpen}
@@ -40,7 +39,7 @@ const Layout = () => {
 			/>
 			<Box flexGrow={1}>
 				<Navbar
-					user={data || {}}
+					user={user || {}}
 					isSidebarOpen={isSidebarOpen}
 					setIsSidebarOpen={setIsSidebarOpen}
 				/>
