@@ -5,3 +5,4 @@ const instance = Axios.create({
 });
 
 export const getUser = (id) => instance.get(`/general/user/${id}`);
+export const getProducts = () => instance.get(`/client/products`);
