@@ -1,4 +1,4 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, CircularProgress, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -17,10 +17,19 @@ const Layout = () => {
 		getUser(userId)
 	);
 	if (isLoading) {
-		return <span>Loading...</span>;
+		return (
+			<Box
+				display="flex"
+				justifyContent="center"
+				alignItems="center"
+				minHeight="60vh"
+			>
+				<CircularProgress md />
+			</Box>
+		);
 	}
 
-	const user = data.data;
+	const user = data?.data;
 	if (isError) {
 		return <span>Error: {error.message}</span>;
 	}

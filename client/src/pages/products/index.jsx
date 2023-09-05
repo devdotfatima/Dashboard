@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, CircularProgress, useMediaQuery } from "@mui/material";
 import Header from "components/Header";
 import Product from "./components/product";
 import { useQuery } from "react-query";
@@ -18,7 +18,14 @@ const Products = () => {
 					title="PRODUCTS"
 					subtitle="See your list of products."
 				/>
-				<span>Loading...</span>;
+				<Box
+					display="flex"
+					justifyContent="center"
+					alignItems="center"
+					minHeight="60vh"
+				>
+					<CircularProgress md />
+				</Box>
 			</>
 		);
 	}
