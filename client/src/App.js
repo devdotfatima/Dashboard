@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Dashboard from "pages/dashboard";
 import Layout from "pages/layout";
 import Products from "pages/products";
+import Customers from "pages/customers";
 
 const queryClient = new QueryClient();
 function App() {
@@ -36,6 +37,11 @@ function App() {
 								<Route
 									path="/products"
 									element={<Products />}
+								/>
+
+								<Route
+									path="/customers"
+									element={<Customers />}
 								/>
 							</Route>
 						</Routes>
