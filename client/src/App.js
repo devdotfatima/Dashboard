@@ -9,6 +9,7 @@ import Layout from "pages/layout";
 import Products from "pages/products";
 import Customers from "pages/customers";
 import Transactions from "pages/transactions";
+import Geography from "pages/geography";
 
 const queryClient = new QueryClient();
 function App() {
@@ -47,6 +48,10 @@ function App() {
 								<Route
 									path="/transactions"
 									element={<Transactions />}
+								/>
+								<Route
+									path="/geography"
+									element={<Geography />}
 								/>
 							</Route>
 						</Routes>
