@@ -16,3 +16,4 @@ export const getTransactions = ({ page, pageSize, sort, search }) =>
 			sort,
 		},
 	});
+export const getGeography = () => instance.get(`/client/geography`);
