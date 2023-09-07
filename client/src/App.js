@@ -10,6 +10,7 @@ import Products from "pages/products";
 import Customers from "pages/customers";
 import Transactions from "pages/transactions";
 import Geography from "pages/geography";
+import NotFound from "pages/notfound";
 
 const queryClient = new QueryClient();
 function App() {
@@ -54,6 +55,10 @@ function App() {
 									element={<Geography />}
 								/>
 							</Route>
+							<Route
+								path="*"
+								element={<NotFound />}
+							/>
 						</Routes>
 					</ThemeProvider>
 				</BrowserRouter>
