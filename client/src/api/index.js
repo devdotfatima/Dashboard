@@ -7,3 +7,12 @@ const instance = Axios.create({
 export const getUser = (id) => instance.get(`/general/user/${id}`);
 export const getProducts = () => instance.get(`/client/products`);
 export const getCustomers = () => instance.get(`/client/customers`);
+export const getTransactions = ({ page, pageSize, sort, search }) =>
+	instance.get(`/client/transactions`, {
+		params: {
+			page,
+			pageSize,
+			search,
+			sort,
+		},
+	});
