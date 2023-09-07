@@ -24,7 +24,7 @@ const Layout = () => {
 				alignItems="center"
 				minHeight="60vh"
 			>
-				<CircularProgress md />
+				<CircularProgress />
 			</Box>
 		);
 	}
