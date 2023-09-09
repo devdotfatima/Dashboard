@@ -11,6 +11,7 @@ import Customers from "pages/customers";
 import Transactions from "pages/transactions";
 import Geography from "pages/geography";
 import NotFound from "pages/notfound";
+import Overview from "pages/overview";
 
 const queryClient = new QueryClient();
 function App() {
@@ -53,6 +54,10 @@ function App() {
 								<Route
 									path="/geography"
 									element={<Geography />}
+								/>
+								<Route
+									path="/overview"
+									element={<Overview />}
 								/>
 							</Route>
 							<Route
