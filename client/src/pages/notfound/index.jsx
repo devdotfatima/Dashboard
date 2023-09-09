@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 
 const NotFound = () => {
+	const theme = useTheme();
 	return (
 		<Box
 			sx={{
@@ -13,8 +14,8 @@ const NotFound = () => {
 			}}
 		>
 			<Typography
-				variant="h1"
-				style={{ color: "white" }}
+				fontSize="1.75rem"
+				sx={{ color: theme.palette.secondary[200] }}
 			>
 				404 Page not Found
 			</Typography>

@@ -7,7 +7,6 @@ import { getSales } from "api";
 const OverviewChart = ({ isDashboard = false, view }) => {
 	const theme = useTheme();
 	const { data, isLoading } = useQuery(["sales"], getSales);
-	console.log(data);
 	const overallStats = data?.data;
 	const [totalSalesLine, totalUnitsLine] = useMemo(() => {
 		if (!overallStats) return [];
