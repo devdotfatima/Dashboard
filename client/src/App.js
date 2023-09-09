@@ -12,6 +12,9 @@ import Transactions from "pages/transactions";
 import Geography from "pages/geography";
 import NotFound from "pages/notfound";
 import Overview from "pages/overview";
+import Daily from "pages/daily";
+import Monthly from "pages/monthly";
+import Breakdown from "pages/breakdown";
 
 const queryClient = new QueryClient();
 function App() {
@@ -58,6 +61,18 @@ function App() {
 								<Route
 									path="/overview"
 									element={<Overview />}
+								/>
+								<Route
+									path="/daily"
+									element={<Daily />}
+								/>
+								<Route
+									path="/monthly"
+									element={<Monthly />}
+								/>
+								<Route
+									path="/breakdown"
+									element={<Breakdown />}
 								/>
 							</Route>
 							<Route
