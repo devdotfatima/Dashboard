@@ -18,3 +18,4 @@ export const getTransactions = ({ page, pageSize, sort, search }) =>
 	});
 export const getGeography = () => instance.get(`/client/geography`);
 export const getSales = () => instance.get(`/sales/sales`);
+export const getDashboardStats = () => instance.get(`/general/dashboard`);
