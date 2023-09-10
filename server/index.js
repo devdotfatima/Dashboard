@@ -7,12 +7,21 @@ import morgan from "morgan";
 import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import salesRoutes from "./routes/sales.js";
-import managementRoutes from "./routes/management.js";
 
 //DATA IMPORTS
 
 import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
+import {
+	dataUser,
+	dataProduct,
+	dataProductStat,
+	dataTransaction,
+	dataOverallStat,
+} from "./data/index.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import Transaction from "./models/Transaction.js";
+import OverallStat from "./models/OverallStat.js";
 
 // CONFIGURATION
 
@@ -29,7 +38,6 @@ app.use(cors());
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/sales", salesRoutes);
-app.use("/management", managementRoutes);
 
 // Mongoose setup
 
@@ -44,5 +52,9 @@ mongoose
 		app.listen(PORT, () => console.log("Server has started at ", PORT));
 		//ONLY ADD DATA ONE TIME
 		// User.insertMany(dataUser);
+		// Product.insertMany(dataProduct);
+		// ProductStat.insertMany(dataProductStat);
+		// Transaction.insertMany(dataTransaction);
+		// OverallStat.insertMany(dataOverallStat);
 	})
 	.catch((error) => console.log("error>>:", error));
