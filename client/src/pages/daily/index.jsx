@@ -10,7 +10,7 @@ import { getSales } from "api";
 const Daily = () => {
 	const [startDate, setStartDate] = useState(new Date("2021-02-01"));
 	const [endDate, setEndDate] = useState(new Date("2021-03-01"));
-	const { data, isLoading } = useQuery(["sales"], getSales);
+	const { data } = useQuery(["sales"], getSales);
 	const theme = useTheme();
 	const overallStats = data?.data;
 	const [formattedData] = useMemo(() => {
